@@ -1,0 +1,300 @@
+/* ================================
+   Page
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    position: relative;
+    overflow: hidden;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #172033;
+
+    background: linear-gradient(
+        135deg,
+        #eef3fa,
+        #f8faff
+    );
+}
+
+body::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    top: -120px;
+    left: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(79, 124, 255, 0.15);
+
+    filter: blur(70px);
+}
+
+body::after {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    right: -150px;
+    bottom: -150px;
+
+    border-radius: 50%;
+
+    background: rgba(80, 200, 180, 0.14);
+
+    filter: blur(80px);
+}
+
+/* ================================
+   Currency Converter Card
+================================ */
+
+.container {
+    width: 420px;
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5eaf1;
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 45px rgba(30, 45, 70, 0.10),
+        0 5px 15px rgba(30, 45, 70, 0.05);
+}
+
+
+/* ================================
+   Heading
+================================ */
+
+.container h1 {
+    margin-bottom: 30px;
+
+    text-align: center;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #172033;
+}
+
+
+/* ================================
+   Labels
+================================ */
+
+.container h3,
+.container h4 {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #536078;
+}
+
+.container h3 {
+    margin-bottom: 10px;
+}
+
+.container h4 {
+    margin-top: 22px;
+}
+
+
+/* ================================
+   Amount Input
+================================ */
+
+.amnt_inp {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 15px;
+
+    border: 1px solid #d9e0ea;
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #f9fafc;
+
+    font-size: 16px;
+    color: #172033;
+
+    transition: 0.2s ease;
+}
+
+.amnt_inp::placeholder {
+    color: #9aa5b5;
+}
+
+.amnt_inp:focus {
+    border-color: #4f7cff;
+
+    background: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.12);
+}
+
+
+/* ================================
+   Currency Select
+================================ */
+
+.from,
+.to {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 14px;
+
+    border: 1px solid #d9e0ea;
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #f9fafc;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    color: #172033;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.from:focus,
+.to:focus {
+    border-color: #4f7cff;
+
+    background: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.12);
+}
+
+
+/* ================================
+   Convert Button
+================================ */
+
+.convert-btn {
+    width: 100%;
+    height: 52px;
+
+    margin-top: 28px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    background: #4f7cff;
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    box-shadow: 0 8px 18px rgba(79, 124, 255, 0.25);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease;
+}
+
+.convert-btn:hover {
+    background: #3f6ff0;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 12px 22px rgba(79, 124, 255, 0.30);
+}
+
+.convert-btn:active {
+    transform: translateY(0);
+
+    box-shadow: 0 5px 12px rgba(79, 124, 255, 0.20);
+}
+
+
+/* ================================
+   Result
+================================ */
+
+.result {
+    min-height: 60px;
+
+    margin-top: 22px;
+    padding: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+
+    background: #f5f8ff;
+
+    border: 1px solid #e1e8f7;
+
+    color: #172033;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .container h1 {
+        font-size: 24px;
+    }
+}
